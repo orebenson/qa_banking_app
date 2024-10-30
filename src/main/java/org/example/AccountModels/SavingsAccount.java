@@ -14,4 +14,11 @@ public class SavingsAccount extends BankAcccount {
     public double getInterestRate() {
         return this.interestRate;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "SavingsAccount{" +
+                "interestRate=" + interestRate +
+                '}';
+    }
 }

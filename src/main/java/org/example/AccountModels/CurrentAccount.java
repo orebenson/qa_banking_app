@@ -14,4 +14,11 @@ public class CurrentAccount extends BankAcccount {
         if (withdrawalAmount > this.maximumWithdrawal) return "Error - Maximum withdrawal exceeded";
         return super.withdraw(withdrawalAmount);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "CurrentAccount{" +
+                "maximumWithdrawal=" + maximumWithdrawal +
+                '}';
+    }
 }

@@ -43,5 +43,12 @@ public class BankAcccount {
         return accountHolderName;
     }
 
-
+    @Override
+    public String toString() {
+        return "BankAcccount{" +
+                "balance=" + balance +
+                ", minimumBalance=" + minimumBalance +
+                ", accountHolderName='" + accountHolderName + '\'' +
+                '}';
+    }
 }
