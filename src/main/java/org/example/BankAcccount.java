@@ -37,4 +37,8 @@ public class BankAcccount {
     public String getAccountHolderName() {
         return accountHolderName;
     }
+
+    public BankAcccount(String accountHolderName) {
+        this.accountHolderName = accountHolderName;
+    }
 }

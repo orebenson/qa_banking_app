@@ -35,4 +35,18 @@ public class BankAccountTest {
         assert (resultMessage.equals("Successful withdraw. Posting cash now."));
     }
 
+    @Test
+    void testAccountHolderName(){
+        String testAccountHolderName = "Nick";
+       BankAcccount acccount1 = new BankAcccount(testAccountHolderName);
+       assert (testAccountHolderName.equals(acccount1.getAccountHolderName()));
+
+       
+
+    }
+
+
+
+
+
 }
