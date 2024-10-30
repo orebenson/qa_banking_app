@@ -1,6 +1,9 @@
 package org.example;
 
+import org.example.AccountModels.SavingsAccount;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankAccountTest {
 
@@ -45,8 +48,13 @@ public class BankAccountTest {
 
     }
 
+    @Test
+    void testSavingsAccount() {
+        String accountHolderName = "Dave";
+        double interestRate = 1.25;
+        SavingsAccount savingsAccount = new SavingsAccount(accountHolderName, interestRate);
 
-
-
+        assertEquals(interestRate, savingsAccount.getInterestRate());
+    }
 
 }
