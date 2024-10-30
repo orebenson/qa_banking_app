@@ -7,11 +7,19 @@ public class BankAcccount {
     private String accountHolderName;
 
     public BankAcccount() {
-        this.balance = 0;
+        this.balance = 0; this.minimumBalance = 0;
     }
 
     public void deposit(double deposit) {
         this.balance += deposit;
+    }
+
+    public String withdraw(double withdraw) {
+        if (this.balance - withdraw < this.minimumBalance) {
+            return "Unable to withdraw. Insufficient funds available.";
+        }
+            this.balance -= withdraw;
+            return "Successful withdraw. Posting cash now.";
     }
 
     public double getBalance() {
